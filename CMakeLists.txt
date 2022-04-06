@@ -30,7 +30,7 @@ cmake_minimum_required(VERSION 3.0)
 ######
 
 ###### PROJECT NAME AND VERSION ######
-set(EXEC_NAME teensyTCP)
+set(EXEC_NAME TCPclient)
 set(PROJECT_VERSION 1.0)
 project(${EXEC_NAME} VERSION ${PROJECT_VERSION})
 
