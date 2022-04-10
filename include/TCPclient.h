@@ -38,7 +38,7 @@ class TCPclient
   ~TCPclient();
   int open_connection(const char *address, int port);
   int close_connection();
-  int read(uint8_t *buffer);
+  int read(uint8_t *buffer, size_t n);
   int write(const void *buffer, size_t n);
 
  private:

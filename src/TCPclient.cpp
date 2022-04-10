@@ -65,17 +65,16 @@ int TCPclient::close_connection()
    return closesocket(m_sock);
 }
 
-int TCPclient::read(uint8_t *buffer)
+int TCPclient::read(uint8_t *buffer, size_t n)
 {
-   int n = 0;
+   int nn = 0;
 
-   if((n = recv(m_sock, buffer, BUF_SIZE - 1, 0)) < 0)
+   if((nn = recv(m_sock, buffer, n, 0)) < 0)
    {
       perror("recv()");
       exit(errno);
    }
-   buffer[n] = 0;
-   return n;
+   return nn;
 }
 
 int TCPclient::write(const void *buffer, size_t size)
